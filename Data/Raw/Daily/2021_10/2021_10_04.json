@@ -1,0 +1,37 @@
+[
+    {
+        "AvailabilityZone": "us-west-2a",
+        "InstanceType": "c4.8xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.528600",
+        "Timestamp": "2021-10-04 22:03:24+00:00"
+    },
+    {
+        "AvailabilityZone": "us-west-2a",
+        "InstanceType": "c4.8xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.527500",
+        "Timestamp": "2021-10-04 15:41:54+00:00"
+    },
+    {
+        "AvailabilityZone": "us-west-2a",
+        "InstanceType": "c4.8xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.526700",
+        "Timestamp": "2021-10-04 11:01:53+00:00"
+    },
+    {
+        "AvailabilityZone": "us-west-2a",
+        "InstanceType": "c4.8xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.527300",
+        "Timestamp": "2021-10-04 04:05:47+00:00"
+    },
+    {
+        "AvailabilityZone": "us-west-2a",
+        "InstanceType": "c4.8xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.528100",
+        "Timestamp": "2021-10-03 21:44:34+00:00"
+    }
+]

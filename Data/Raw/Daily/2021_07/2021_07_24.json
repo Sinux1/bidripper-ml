@@ -1,0 +1,9 @@
+[
+    {
+        "AvailabilityZone": "us-west-2a",
+        "InstanceType": "c4.8xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.556500",
+        "Timestamp": "2021-07-24 22:12:25+00:00"
+    }
+]

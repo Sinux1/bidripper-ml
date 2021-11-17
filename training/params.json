@@ -1,0 +1,44 @@
+{
+  "DatasetGroup": {
+    "DatasetGroupName":"BidRipperDataSet",
+    "Domain": "CUSTOM"
+  },
+  "Predictor": {
+    "PredictorName": "BidRipperPredictor",
+    "ForecastHorizon": 1,
+    "FeaturizationConfig":{
+      "ForecastFrequency":"W"
+    },
+    "PerformAutoML": true
+  },
+  "Forecast": {
+    "ForecastName": "BidRipperForecast",
+    "ForecastTypes":[
+      "0.50"
+    ]
+  },
+  "TimestampFormat": "yyyy-MM-dd",
+  "Datasets": [
+    {
+      "DatasetName": "BidRipperTargetTimeSeries",
+      "Domain": "CUSTOM",
+      "DatasetType": "TARGET_TIME_SERIES",
+      "DataFrequency": "W",
+      "Schema": {
+        "Attributes": [
+          {
+            "AttributeName": "timestamp",
+            "AttributeType": "timestamp"
+          }, {
+              "AttributeName": "target_value",
+              "AttributeType": "float"
+          }, {
+            "AttributeName": "item_id",
+            "AttributeType": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "PerformDelete": true
+}
