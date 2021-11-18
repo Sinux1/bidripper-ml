@@ -1,8 +1,6 @@
-# bidripper-ml
+# Bidripper Project : Bidripper-ml
 
-# Setting up for Developers
-
-These instructions are for a linux environment, specifically for an Ubuntu 20.04 fresh install.  
+These instructions are for a Linux environment, tested on an Ubuntu 20.04 fresh install.  
 
 ## Required packages
 
@@ -20,7 +18,7 @@ source ~/.bashrc
 
 ## Configure AWS profile
 
-To deploy Bidripper you must have an AWS account, and it is highly recommended that you creater a user that is **not** the root user of the AWS account. Follow this link to create an AWS account. Once your account is created, create an admin user and save the account keys provided to you in a safe place because you will need them!
+To deploy Bidripper you must have an AWS account, and it is highly recommended that you create a user that is **not** the root user. Once your account is created, create an admin user and save the account keys provided to you in a safe place because you will need them!
 
 [Create a free AWS account and Admin User](https://docs.aws.amazon.com/translate/latest/dg/setting-up.html)
 
@@ -29,13 +27,9 @@ Once your AWS account is set up, get your (secret) access keys ready and then ru
 
 `aws configure`
 
-Follow the questions. When asked enter `us-west-2` for region, and `json` for the question about return data types. This will configure a *_default_* profile that will be used later when pulling the amplify project.  
+When prompted, enter `us-west-2` for region, and `json` for default data type. This will configure a *_default_* profile that will be used later when building and deploying this SAM application.  
 
-## Install nvm, npm, and node
-
-
-
-## Installing AWS SAM
+## Installing AWS SAM CLI
 
 Navigate to your home directory and download the AWS SAM CLI  
 
@@ -47,8 +41,6 @@ sudo ./sam-installation/install
 
 Follow this with a sanity check 
 `sam --version` should provide an appropriate version number.
-
-
 
 ## Initializing Bidripper-ml From Git Repository
 
@@ -72,14 +64,13 @@ The deployment may take several minutes. Once the deployment is complete, the fo
 
 ## Initial Training
 
-If you haev up-to-date training data, the next step is to get a current forecast. All subsequent forecasts will append new, weekly data to the previous week's training data. The training data provided in this repo is current as of this writing, and efforts will be made to update this repository with up to date data. 
+If you have up-to-date training data, the next step is to get a current forecast. All subsequent forecasts will append new, weekly, data to the previous training data. The training data provided in this repo is current as of this writing and efforts will be made to keep the data up-to-date. 
 
-To begin the initial training, and to upload the params.json file, run  
+To begin the initial training, and to upload the params.json file, execute  
 `aws s3 sync ./training/ s3://<forecast bucket name>`
 
-Currently the params.json file has autoML set to true and so the training time may take 2+ hours. By changing this to false, and adding an algorithm to the file, training time can be reduced to approximatly 40 minutes, but accuraccy may be affected. We have chosen to use autoML until more data can be retrieved. 
+Currently the params.json file has autoML set to true and so the training time may take 2+ hours. By changing this to false, and adding an algorithm to the file, training time can be reduced to approximately 40 minutes, but accuracy may be affected. We have chosen to use autoML until more data can be accumulated. 
 
 ## For the Bidripper-site
 
 If you plan to use the Bidripper-site with Bidripper-ml, please go to [Bidrpper-site](https://github.com/Sinux1/bidripper-site) and follow the deployment instructions. Make sure to note the forecast bucket from the Bidripper-ml deployment. 
-
