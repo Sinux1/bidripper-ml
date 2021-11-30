@@ -1,5 +1,9 @@
 # Bidripper Project : Bidripper-ml
 
+Get your weekly spot bid suggestion  [here](http://bid.hashripper.net)
+
+## Build and Deploy 
+
 These instructions are for a Linux environment, tested on an Ubuntu 20.04 fresh install.  
 
 ## Required packages
@@ -74,3 +78,13 @@ Currently the params.json file has autoML set to true and so the training time m
 ## For the Bidripper-site
 
 If you plan to use the Bidripper-site with Bidripper-ml, please go to [Bidrpper-site](https://github.com/Sinux1/bidripper-site) and follow the deployment instructions. Make sure to note the forecast bucket from the Bidripper-ml deployment. 
+
+## Diagrams
+How the BidRipper ML pipeline interacts with the BidRipper site
+![image info](./images/front-back-data-flow.png)
+
+How data flows through the BidRipper ML pipeline
+![image info](./images/bidripper-ml-pipeline.png)
+
+How data flows through the Bidripper StepFunction State Machine
+![image info](./images/step-functions-workflow.png)
