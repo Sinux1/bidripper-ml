@@ -19,7 +19,7 @@ Parameters:
     Default: params.json
   CloudWatchRule:
     Type: String  
-    Default: cron(0 0 ? * MON *) # Expression is in GMT time. Will trigger at midnight Monday morning PST
+    Default: cron(0 0 ? * MON *) # Expression is in GMT time. Will trigger at 9p.m. Sunday evening PST
     Description: ' Schedule Expression'
 Resources:
 
