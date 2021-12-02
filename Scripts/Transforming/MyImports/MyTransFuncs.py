@@ -19,14 +19,7 @@ TS = "Timestamp"
 C4 = "c4.8xlarge"
 
 def checkAndSetInFile(argList):
-    '''
-    Description:
 
-    Parameters:
-
-    Return:
-
-    '''
     if len(argList) != 2:
         wMss = "Please pass a full input file path as parameter"
         sys.exit(wMss)
@@ -37,14 +30,7 @@ def checkAndSetInFile(argList):
         return os.path.join(argList[1])
 
 def transformDataToDict(starting_dt, tr_dict, instanceType=C4):
-    '''
-    Description:
 
-    Parameters:
-
-    Return:
-
-    '''
     temp_ts_dict = {TS: [], "SpotPrice": [], "InstanceType": []}
     MN = 60
     HR = 24
@@ -67,14 +53,7 @@ def transformDataToDict(starting_dt, tr_dict, instanceType=C4):
     return temp_ts_dict    
 
 def getDateTimeFromInFilePath(filePath):
-    '''
-    Description:
 
-    Parameters:
-
-    Return:
-
-    '''
     # Extract filename from path
     fileName = os.path.split(filePath)[1]
     # Remove extension from fileName
@@ -89,14 +68,7 @@ def getDateTimeFromInFilePath(filePath):
     return startDate
 
 def generateTransRaw(rawData, startDate):
-    '''
-    Description:
 
-    Parameters:
-
-    Return:
-
-    '''
     tr = {}
     for elm in rawData:
         if elm["InstanceType"] != C4:
@@ -121,14 +93,7 @@ def generateTransRaw(rawData, startDate):
     return tr
 
 def generateOutFilePath(cleanDir, inPath, fileName):
-    '''
-    Description:
 
-    Parameters:
-
-    Return:
-
-    '''
     parentDirBaseName = os.path.basename(os.path.dirname(os.path.abspath(inPath)))
     saveDirPath = os.path.join(cleanDir, parentDirBaseName)
     os.makedirs (saveDirPath, exist_ok=True)
