@@ -75,6 +75,8 @@ To begin the initial training, and to upload the params.json file, execute
 
 Currently the params.json file has autoML set to true and so the training time may take 2+ hours. By changing this to false, and adding an algorithm to the file, training time can be reduced to approximately 40 minutes, but accuracy may be affected. We have chosen to use autoML until more data can be accumulated. 
 
+If the data is not up to date, then executing the `Scripts/Collecting/DriveCollection.py` will collect raw spot price data for the last 90 days and organize it within the `Data/` directory. 
+
 ## For the Bidripper-site
 
 If you plan to use the Bidripper-site with Bidripper-ml, please go to [Bidrpper-site](https://github.com/Sinux1/bidripper-site) and follow the deployment instructions. Make sure to note the forecast bucket from the Bidripper-ml deployment. 
